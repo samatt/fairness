@@ -75,12 +75,15 @@ p{
 <body>
 <h2>Overall Fairness Score  </h2>
 <p>Your data is <span>65%</span> fair</p>
-<p>Fairness is based on the disparate impact four fifths ration</p>
+<p>Fairness is based on the disparate impact four fifths ratio</p>
 
 <svg class="chart1"></svg>
 <h2>Scores by categories</h2>
 <svg class="chart"></svg>
 
+<h2>More info</h2>
+<p> <em>Disparate impact four fifths ratio definition</em> :<br> P(X=0|C=1) / P(X=1|C=1) <= 0.8 means that there is disparate impact (discrimination).<br>  X: protected class status.  C: outcome.  C=1 is a good outcome. <br> X = 1 is the majority class.</p>
+<p>For more information on the research behind this method please refer to this <a href="http://arxiv.org/abs/1412.3756">paper</a><p>
 <script>
 
 var margin = {top: 20, right: 20, bottom: 30, left: 250},
