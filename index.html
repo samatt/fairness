@@ -16,7 +16,7 @@
   .x-axis path,
 .x-axis line {
   fill: none;
-  stroke: #FFF;
+  stroke: #000;
   shape-rendering: crispEdges;
 }
 .y-axis {
@@ -29,18 +29,18 @@
   /*fill: steelblue;*/
 }
 body{
-  background-color: black;
+  background-color: white;
 }
 h2{
   font-family: 'Helvetica';
   margin: auto;
   text-align: left;
-  color:white;
+  color:black;
 }
 
 .chart text {
   font-family: 'Helvetica';
-  fill: white;
+  fill: black;
   font: 10px sans-serif;
   text-anchor: end;
   /*width: 100%;*/
@@ -48,7 +48,7 @@ h2{
 }
 .chart1 text {
   font-family: 'Helvetica';
-  fill: white;
+  fill: black;
   font: 10px sans-serif;
   text-anchor: end;
   /*width: 100%;*/
@@ -56,12 +56,12 @@ h2{
 }
 
 span{
-  color:rgb(246, 146, 84);
+  color:rgb(206, 0, 11);
 }
 
 p{
   font-family: 'Helvetica';
-  color:white;
+  color:black;
 }
 
 </style>
@@ -85,7 +85,7 @@ p{
 <p> <em>Disparate impact four fifths ratio definition</em> :<br> P(X=0|C=1) / P(X=1|C=1) <= 0.8 means that there is disparate impact (discrimination).<br>  X: protected class status.  C: outcome.  C=1 is a good outcome. <br> X = 1 is the majority class.</p>
 <p>For more information on the research behind this method please refer to this <a href="http://arxiv.org/abs/1412.3756">paper</a><p>
 <script>
-
+var something = ["#d7191c","#fdae61","#a6d96a"];
 var margin = {top: 20, right: 20, bottom: 30, left: 250},
     width = 960 - margin.left - margin.right,
     height = 350 - margin.top - margin.bottom;
@@ -114,9 +114,12 @@ var margin = {top: 20, right: 20, bottom: 30, left: 250},
       return "<span'>" + d.value + " people"+"</span>";
   });
 
+
+
+
 var color = d3.scale.linear()
-    .domain([ 0,0.8,1])
-    .range(colorbrewer["RdYlGn"][4]);
+    .domain([ 0.7,0.9,1])
+    .range(colorbrewer.RdYlGn[4]);
 
    
 var chart = d3.select(".chart")
